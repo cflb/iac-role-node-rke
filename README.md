@@ -50,10 +50,10 @@ Uma vez criado e inicializado o seu ambiente precisamos instalar todas as depend
 ### Terceiro Passo
 Para verificar se tudo aconteceu bem, você pode executar o comando a seguir:
 
-> (o-nome-da-sua-env)$ molecule check
+> (o-nome-da-sua-env)$ molecule test
 
 
-Ele ira executar um ciclo interiro de testes (dependency, cleanup, destroy, create, prepare, converge, check, cleanup, destroy)
+Ele ira executar um ciclo interiro de testes (dependency, lint, cleanup, destroy, syntax, create, prepare, converge, idempotence, side_effect, verify, cleanup, destroy)
 
 ### Quarto Passo
 Para realizar teste rápido após alguma modificação execute a seguinte sequência de comandos:
@@ -62,15 +62,7 @@ Para realizar teste rápido após alguma modificação execute a seguinte sequê
 
 > (o-nome-da-sua-env)$ molecule converge
 
-> (o-nome-da-sua-env)$ molecule verify
-
-
-Ao termino do teste, destrua o ambiente
-
-> (o-nome-da-sua-env)$ molecule destroy
-
-
-> (o-nome-da-sua-env)$ molecule check
+> (o-nome-da-sua-env)$ molecule test
 
 
 Para realizar teste rápido após alguma modificação
